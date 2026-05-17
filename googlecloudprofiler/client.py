@@ -182,7 +182,7 @@ class Client:
     if not service_re.match(service):
       raise ValueError('Service name "%s" does not match regular expression '
                        '"%s"' % (service, service_re.pattern))
-    deployment_labels = {_LANGUAGE_LABEL: 'python'}
+    deployment_labels = {_LANGUAGE_LABEL: 'go'}
     service_version = service_version or os.environ.get(
         'GAE_VERSION') or os.environ.get('K_REVISION')
     if service_version:
